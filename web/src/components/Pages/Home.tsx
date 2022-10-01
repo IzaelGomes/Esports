@@ -17,10 +17,6 @@ import CreateAdModal from '../CreateAdModal'
 import GameBanner from '../GameBanner';
 import CreateAdBanner from '../CreateAdBanner';
 
-
-
-
-
 interface Game {
   id: number;
   title: string;
@@ -42,8 +38,8 @@ const Home = () => {
         const res = await fetch('http://localhost:3333/games')
         const games = await res.json()
 
-        setGames(games[0])
         setLoading(false)
+        setGames(games[0])
       } catch (err) {
         console.log(err);
       }
