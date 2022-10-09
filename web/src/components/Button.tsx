@@ -6,13 +6,6 @@ type ButtonProps = {
   children:string;
 }
 
-/*type MakeUser<Type extends {sobrenome:string}> = (
-  user:Type
-) => Type
-
-const makeUser:MakeUser<{sobrenome:string, pass:string}> = (user) =>{
-  return user
-} */
 
 const Button = ({ children }: ButtonProps) => {
   return (

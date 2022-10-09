@@ -63,7 +63,7 @@ const Home = () => {
 
       {loading && <DotLoader className='mt-20' color='#5c1894' size={40} loading={loading} />}
 
-      <div className='grid grid-cols-6 gap-6 mt-6 '>
+      <div className='grid grid-cols-6 gap-6 mt-6 grid-flow-row-dense'>
         {games.map(({ id, title, bannerUrl, _count }) => {
           return (
 

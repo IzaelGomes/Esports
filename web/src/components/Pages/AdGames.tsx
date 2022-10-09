@@ -28,9 +28,10 @@ const AdGames = () => {
   const [discord, setDiscord] = useState<String>('');
   const [copy, setCopy] = useState<boolean>(false);
 
- 
-  const isCopy = () =>{
-      setCopy(true)
+
+  const isCopy = () => {
+    setCopy(true)
+    alert('User copiado!')
   }
 
 
@@ -65,7 +66,7 @@ const AdGames = () => {
 
         <div className='max-w-[1344px] mx-auto pt-15 pb-20'>
           {ads.length == 0 ? <p className='text-white font-bold'>Esse jogo não tem anúncios🙁</p> : <h2 className='font-bold text-white mb-10  '>Conecte-se e começe a jogar!</h2>}
-          <div className='flex gap-7' >
+          <div className='flex gap-7 flex-wrap'>
 
             {ads.map(({ name, id, hourEnd, hourStart, yearsPlaying, weekDays, useVoiceChannel }) => {
               return (
@@ -98,20 +99,22 @@ const AdGames = () => {
             <Dialog.Portal>
               <Dialog.Overlay className='bg-black/60 inset-0 fixed' />
               <Dialog.Content className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-            
+
 
                 <div className='flex flex-col w-60 items-center bg-[#2A2634] px-5 py-12 rounded-md'>
-                {copy && <Checks size={45} className='text-green-600'/> }
+                  {copy && <Checks size={45} className='text-green-600' />}
 
                   <h2 className='text-white text-lg font-semibold text-center'>Let's play!</h2>
                   <span className='text-zinc-300 pb-3 text-center text-xs'>agora é só começar a jogar</span>
                   <span className='text-white text-sm pb-1 text-center '>Adcione no Discord</span>
 
-              
-                <CopyToClipboard text={`${discord}`}>
+
+                  <CopyToClipboard text={`${discord}`}>
+                    <a href="https://discord.com" target="_blanks">
                     <button onClick={isCopy} className='bg-black text-white w-40 px-1 py-1 rounded-md transition ease-in-out delay-150 hover:bg-black/25 '>{discord}</button>
-                </CopyToClipboard>
-                  
+                    </a>
+                  </CopyToClipboard>
+
 
                 </div>
               </Dialog.Content>

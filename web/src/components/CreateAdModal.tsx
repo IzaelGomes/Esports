@@ -4,8 +4,9 @@ import * as Checkbox from '@radix-ui/react-checkbox';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import axios from 'axios';
 import Button from './Button';
+import { toast } from 'react-toastify';
 
-import { Check, GameController } from 'phosphor-react';
+import { Check } from 'phosphor-react';
 import Input from './Form/Input'
 
 
@@ -50,10 +51,11 @@ const CreateAdModal = () => {
         hourEnd: data.hourEnd,
         useVoiceChannel: useVoiceChannel
       })
-      alert('Anuncio criado com sucesso!')
+      toast.success('Anuncio criado com sucesso!', {autoClose:3000})
+      
     } catch (err) {
       console.log(err)
-      alert('erro ao criar um anúncio')
+      toast.error('erro ao criar um anúncio')
     }
   }
 
