@@ -38,7 +38,8 @@ const CreateAdModal = () => {
 
     const formData = new FormData(e.target as HTMLFormElement)
     const data = Object.fromEntries(formData)
-    //console.log(data)
+    console.log(formData)
+    console.log(data)
 
 
     try {
@@ -58,9 +59,6 @@ const CreateAdModal = () => {
       toast.error('erro ao criar um anúncio')
     }
   }
-
-
-
 
   return (
     <Dialog.Portal>

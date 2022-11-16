@@ -1,15 +1,13 @@
-//import axios from 'axios'
+
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-import Logo from '../../assets/Logo-nlw-esports.svg'
-import Button from '../Button';
+import Logo from '../assets/Logo-nlw-esports.svg'
 
 import * as Dialog from '@radix-ui/react-dialog'
 import { GameController, Checks } from 'phosphor-react';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-
 
 interface Ads {
   id: string;

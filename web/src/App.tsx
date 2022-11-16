@@ -1,8 +1,8 @@
-import Home from "./components/Pages/Home"
+import Home from "./Pages/Home"
 
 import './styles/main.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import AdGames from './components/Pages/AdGames'
+import AdGames from './Pages/AdGames'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

@@ -1,21 +1,15 @@
-import React from 'react'
 
+import Logo from '../assets/Logo-nlw-esports.svg'
 
-//import {BrowserRouter, Routes, Route } from 'react-router-dom'
-
-import logoImage from '../../assets/Logo-nlw-esports.svg'
-import '../../styles/main.css'
-
-//import {MagnifyingGlassPlus } from 'phosphor-react'
+import '../styles/main.css'
 
 import { useState, useEffect } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import DotLoader from "react-spinners/DotLoader";
 
-
-import CreateAdModal from '../CreateAdModal'
-import GameBanner from '../GameBanner';
-import CreateAdBanner from '../CreateAdBanner';
+import CreateAdModal from '../components/CreateAdModal'
+import GameBanner from '../components/GameBanner';
+import CreateAdBanner from '../components/CreateAdBanner';
 
 interface Game {
   id: number;
@@ -53,7 +47,7 @@ const Home = () => {
   return (
 
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
-      <img src={logoImage} alt='logo' />
+      <img src={Logo} alt='logo' />
 
 
 
